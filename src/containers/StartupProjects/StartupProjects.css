@@ -1,7 +1,9 @@
 .card-image {
   max-width: 100%;
+  width: 200px;
   height: auto;
-  width: 250px;
+  object-fit: contain;
+  /* border-radius: 50%; */
 }
 .card-title {
   color: #000000;
@@ -48,8 +50,11 @@
   box-shadow: #d9dbdf 0px 20px 30px -10px;
 }
 .project-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  height: 250px;
+  height: 280px;
   overflow: hidden;
   text-align: center;
 }

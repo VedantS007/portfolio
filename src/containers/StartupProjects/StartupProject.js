@@ -5,10 +5,10 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
-  // function openProjectInNewWindow(url) {
-  //   var win = window.open(url, "_blank");
-  //   win.focus();
-  // }
+  function openProjectInNewWindow(url) {
+    var win = window.open(url, "_blank");
+    win.focus();
+  }
   const {isDark} = useContext(StyleContext);
   if (!bigProjects.display) {
     return null;
@@ -43,10 +43,10 @@ export default function StartupProject() {
                     <div className="project-image">
                       <img
                         src={project.image}
-                        alt={project.projectName}
+                        alt={project.projectName}  
                         className="card-image"
                       ></img>
-                    </div>
+                    </div> 
                   ) : null}
                   <div className="project-detail">
                     <h5
@@ -61,7 +61,7 @@ export default function StartupProject() {
                     >
                       {project.projectDesc}
                     </p>
-                    {/* {project.footerLink ? (
+                    {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {
                           return (
@@ -77,7 +77,7 @@ export default function StartupProject() {
                           );
                         })}
                       </div>
-                    ) : null} */}
+                    ) : null}
                   </div>
                 </div>
               );
